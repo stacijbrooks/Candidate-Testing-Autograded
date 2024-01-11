@@ -16,24 +16,26 @@ let correctAnswers;
 let candidateAnswers;
 
   // TODO 1.1b: Ask for candidate's name //
-function askForName {
-let candidateName = prompt("What is your name?")
+function askForName() {
+  candidateName = prompt("What is your name?")
 
 }
 
-function askQuestion("Who was the first American woman in space? ") {
+function askQuestion() {
+question = prompt("Who was the first American woman in space? ");
+}
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 
-}
+
 
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-if candidateAnswer ("Sally Ride") {
-  console.log(Correct!);
-  else
-  console.log("Incorrect! Please try again.")
+if (candidateAnswer === correctAnswer) {
+  console.log("Correct!");
+ } else {
+  console.log("Sorry,incorrect! Please try again.")
 }
 
 
@@ -46,7 +48,7 @@ if candidateAnswer ("Sally Ride") {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log("Hello" candidateName);
+   console.log("Hello," (candidateName));
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
