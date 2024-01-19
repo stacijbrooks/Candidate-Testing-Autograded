@@ -35,7 +35,7 @@ function gradeQuiz(candidateAnswers) {
 if (candidateAnswer === correctAnswer) {
   console.log("Correct!");
  } else {
-  console.log("Sorry,incorrect! Please try again.")
+  console.log("Sorry,this is incorrect! Please try again.")
 }
 
 
