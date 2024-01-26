@@ -44,15 +44,18 @@ for (let i = 0; i < questions.length; i++)  {
 }
 
 
-function gradeQuiz(candidateAnswers) {
-
+function gradeQuiz(candidateAnswers)
+//for loop
+//commit a change for part 2 before working on part 3
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-/*if (candidateAnswer === correctAnswer) {
+for (let i=0; i < correctAnswers.length; i++) {
+if (candidateAnswers === correctAnswers[i]) {
   console.log("Correct!");
  } else {
-  console.log("Sorry,this is incorrect! Please try again.")
-}*/
-console.log(`User response ${candidateAnswers}, correct response is ${correctAnswers}`)
+  console.log("Sorry,this is incorrect! Please try again.");
+}
+ //resuse for FOR LOOP bracket notation to compare items
+console.log(`User response ${candidateAnswers}, correct response is ${correctAnswers}`);
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
