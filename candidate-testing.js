@@ -37,25 +37,28 @@ function askQuestion() {
 //question = prompt("Who was the first American woman in space? ");
 
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
-for (let i = 0; i < questions.length; i++)  {
-  let userAnswer = input.question(questions[i]);
-  candidateAnswers.push(userAnswer);
-}
+  for (let i = 0; i < questions.length; i++)  {
+    let userAnswer = input.question(questions[i]);
+    candidateAnswers.push(userAnswer);
+  }
 }
 
 
-function gradeQuiz(candidateAnswers)
+function gradeQuiz(candidateAnswers) {
 //for loop
 //commit a change for part 2 before working on part 3
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-for (let i=0; i < correctAnswers.length; i++) {
-if (candidateAnswers === correctAnswers[i]) {
-  console.log("Correct!");
- } else {
-  console.log("Sorry,this is incorrect! Please try again.");
-}
- //resuse for FOR LOOP bracket notation to compare items
-console.log(`User response ${candidateAnswers}, correct response is ${correctAnswers}`);
+  for (let i=0; i < correctAnswers.length; i++) {
+    if (candidateAnswers[i] === correctAnswers[i]) {
+      console.log("Correct!");
+    } else {
+      console.log(`User response ${candidateAnswers[i]}, correct response is ${correctAnswers[i]}`);
+      //console.log("Sorry,this is incorrect! Please try again.");
+    }
+  }
+
+  //resuse for FOR LOOP bracket notation to compare items
+  //console.log(`User response ${candidateAnswers}, correct response is ${correctAnswers}`);
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
 
