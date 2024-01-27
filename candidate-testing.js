@@ -48,9 +48,11 @@ function gradeQuiz(candidateAnswers) {
 //for loop
 //commit a change for part 2 before working on part 3
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
+  let numofCorrectAnswers = 0
   for (let i=0; i < correctAnswers.length; i++) {
-    if (candidateAnswers[i] === correctAnswers[i]) {
+    if (candidateAnswers[i].toUpperCase() === correctAnswers[i].toUpperCase()) {
       console.log("Correct!");
+      numofCorrectAnswers++;
     } else {
       console.log(`User response ${candidateAnswers[i]}, correct response is ${correctAnswers[i]}`);
       //console.log("Sorry,this is incorrect! Please try again.");
@@ -60,8 +62,7 @@ function gradeQuiz(candidateAnswers) {
   //resuse for FOR LOOP bracket notation to compare items
   //console.log(`User response ${candidateAnswers}, correct response is ${correctAnswers}`);
 
-  let grade;  //TODO 3.2 use this variable to calculate the candidates score.
-
+  let grade = numofCorrectAnswers / questions.length * 100;  //TODO 3.2 use this variable to calculate the candidates score.
 
   return grade;
 }
